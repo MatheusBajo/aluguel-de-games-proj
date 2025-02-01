@@ -24,9 +24,8 @@ function App() {
             <Header/>
             <Main />
             <Footer/>
-
             <a
-                href="https://wa.me/1142377766"
+                href="https://wa.me/+551142377766"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-4 right-4 z-50 drop-shadow-primary 4xl:p-10 p-0"

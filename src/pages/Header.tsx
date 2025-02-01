@@ -201,7 +201,7 @@ function Header() {
                     <ul className="flex items-center gap-0.5">
                         <li>
                             <a
-                                href="https://wa.me/1142377766"
+                                href="https://wa.me/+551142377766"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
