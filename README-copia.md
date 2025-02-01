@@ -24,4 +24,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 ## Estrutura do Projeto
 
 - **src/**: Componentes React, estilos, scripts e assets do projeto.
-- **package.json**: Lista as dependências e scripts para gerenciamento do projeto.// Modificação forçada para commit
+- **package.json**: Lista as dependências e scripts para gerenciamento do projeto.
