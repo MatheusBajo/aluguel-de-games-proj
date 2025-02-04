@@ -27,3 +27,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 - **package.json**: Lista as dependências e scripts para gerenciamento do projeto.// Modificação forçada para commit
 // Alteração no Header
 // Melhorias no Header
+// Adiciona estrutura do Carousel
