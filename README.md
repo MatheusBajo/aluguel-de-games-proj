@@ -32,3 +32,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 // Adiciona autoplay no Carousel
 // Refatoração do código do Carousel
 // Adiciona gradiente dinâmico
+// Correção de bugs no Carousel
