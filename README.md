@@ -35,3 +35,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 // Correção de bugs no Carousel
 // Testes com transições
 // Melhorias na animação do Carousel
+// Pequenos ajustes no layout
