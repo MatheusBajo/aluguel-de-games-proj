@@ -40,3 +40,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 // Refinamento na responsividade
 // Suporte a gestos no Carousel
 // Criação do Footer
+// Implementação do GSAP
