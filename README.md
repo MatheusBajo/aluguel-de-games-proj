@@ -43,3 +43,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 // Implementação do GSAP
 // Animação do Header e Carousel
 // Animação de entrada e saída no Carousel
+// Últimos ajustes antes do push
