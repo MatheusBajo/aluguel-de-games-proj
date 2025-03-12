@@ -1,0 +1,131 @@
+/* Seção principal */
+.top-brinquedos {
+    width: 100%;
+    color: #fff;
+    padding: 24px 16px; /* equivalente ao Tailwind py-6 px-4 */
+}
+
+.title {
+    font-size: 1.25rem; /* ~ text-xl */
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 1.5rem; /* ~ lg:text-2xl */
+    }
+}
+
+/* Container que envolve slider e botões */
+.slider-container {
+    position: relative;
+}
+
+/* Botões de scroll (esquerda e direita) */
+.scroll-button {
+    display: none; /* Esconde por padrão (mostramos em breakpoint maior) */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+    z-index: 20;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Ícones das setas */
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Botão esquerdo */
+.scroll-button-left {
+    left: 0;
+}
+
+/* Botão direito */
+.scroll-button-right {
+    right: 0;
+}
+
+/* Mostra os botões de scroll a partir de 768px (md no Tailwind) */
+@media (min-width: 768px) {
+    .scroll-button {
+        display: block;
+    }
+}
+
+/* Slider horizontal */
+.slider {
+    display: flex;
+    gap: 16px; /* space-x-4 */
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* scroll-smooth */
+    /* Caso queira remover a scrollbar */
+    scrollbar-width: none; /* Firefox */
+}
+.slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Cada item do slider */
+.slider-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 130px;
+    transition: transform 0.3s;
+}
+
+/* Efeito de "zoom" ao hover */
+.slider-item:hover {
+    transform: scale(1.05);
+}
+
+/* SVG de ranking (número) - absoluta dentro do card */
+.ranking-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* para não interferir no clique */
+}
+
+/* Link do card (imagem) */
+.slider-item-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* remove sublinhado de link */
+    color: inherit; /* herda a cor atual */
+}
+
+/* Imagem do card */
+.slider-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* ~ rounded-md */
+}
+
+/* Classe utilitária de acessibilidade (oculta visualmente) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
