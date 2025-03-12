@@ -10,6 +10,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
+import TopBrinquedosYoshiro from "./top-toys-yoshiro.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ function AnimatedCarouselText({ texts }) {
             opacity: 0,
             duration: 0.3,
             ease: "power1.in",
-            stagger: { each: 0.02, from: "end" },
+            stagger: { each: 0.01, from: "end" },
             onComplete: () => {
                 setCurrentText(nextText);
                 prevRealIndex.current = realIndex;
@@ -85,20 +86,16 @@ function AnimatedCarouselText({ texts }) {
     }, [currentText]);
 
     return (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
             <h2 key={currentText} ref={containerRef} className="text-white lg:text-3xl md:text-xl text-xs font-bold"></h2>
         </div>
     );
 }
 
-
-
-
-
 function Main() {
     const autoplayRef = useRef(
         Autoplay({
-            delay: 5000,
+            delay: 2000,
             stopOnInteraction: true,
             stopOnMouseEnter: false,
         })
@@ -118,10 +115,11 @@ function Main() {
     }, []);
 
     return (
-        <main className="flex flex-col gap-10 px-4 pt-4 mx-auto w-full max-w-[1400px]">
+        <main className="flex flex-col gap-10 pt-5 mx-auto w-full max-w-[1400px]">
             {/* =============== SECTION 1: CAROUSEL =============== */}
-            <section className="div-carousel relative w-full">
+            <section className="div-carousel relative w-full z-10 px-5">
                 <Carousel
+                    slidesCount={carouselImages.length}
                     plugins={[autoplayRef.current]}
                     className="relative mx-auto w-full max-w-[1280px] select-none"
                     opts={{ align: "start", loop: true }}
@@ -131,13 +129,13 @@ function Main() {
                         {carouselImages.map((image, index) => (
                             <CarouselItem key={index}>
                                 <Card>
-                                    <CardContent className="relative flex items-center justify-center p-0 overflow-hidden aspect-video 2xl:max-h-[720px]">
+                                    <CardContent className="relative flex items-center justify-center p-0 overflow-hidden aspect-video 2xl:max-h-[720px] pointer-events-none select-none">
                                         <img
                                             src={image}
                                             alt={`Imagem Carousel ${index + 1}`}
-                                            className="relative w-full h-full object-cover select-none z-10"
+                                            className="relative w-full h-full object-cover select-none"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                                     </CardContent>
                                 </Card>
                             </CarouselItem>
@@ -150,7 +148,8 @@ function Main() {
             </section>
 
             {/* =============== SECTION 2: DESTAQUES (EXEMPLO) =============== */}
-            <TopBrinquedos />
+            <TopBrinquedosYoshiro />
+            {/*<TopBrinquedos />*/}
 
             {/* =============== SECTION 3: SOBRE NÓS (EXEMPLO) =============== */}
             <section className="flex flex-col md:flex-row items-center gap-10 max-w-3xl w-full mx-auto">

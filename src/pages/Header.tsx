@@ -31,7 +31,7 @@ function Header() {
   supports-[backdrop-filter]:before:z-[-1]"
         >
 
-            <nav className="flex items-center justify-center gap-2 px-5 mx-auto h-14 w-full max-w-screen-3xl">
+            <nav className="flex items-center justify-center gap-2 px-5 mx-auto h-14 w-full max-w-screen-3xl z-[1000]">
 
                 {/* LOGO / Título */}
                 <div className="grow flex h-full items-center w-full justify-start text-nowrap">
@@ -41,7 +41,7 @@ function Header() {
                     >
                         <img
                             className="h-5 dark:invert"
-                            src="assets/carro-logo-aluguel-de-games.png"
+                            src="/assets/carro-logo-aluguel-de-games.png"
                             alt="Logo Aluguel de Games"
                         />
                         <span className="text-lg font-bold uppercase block lg:block sm:hidden select-none">

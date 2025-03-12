@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Para o IE e Edge */
+    scrollbar-width: none;  /* Para o Firefox */
+}
+
+.titulo-brinquedos {
+    z-index: -100;
+}
+
+
 .div-carousel {
     width: 100%;
     transform: translateY(-100%);

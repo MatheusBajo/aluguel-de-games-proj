@@ -28,7 +28,7 @@ function App() {
                 href="https://wa.me/+551142377766"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-4 right-4 z-50 drop-shadow-primary 4xl:p-10 p-0"
+                className="fixed bottom-4 right-4 z-50 drop-shadow-primary 4xl:p-10 p-0 select-none"
             >
                 <img
                     src="/assets/WhatsApp-logo-42377766.png"

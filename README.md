@@ -24,23 +24,4 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 ## Estrutura do Projeto
 
 - **src/**: Componentes React, estilos, scripts e assets do projeto.
-- **package.json**: Lista as dependências e scripts para gerenciamento do projeto.// Modificação forçada para commit
-// Alteração no Header
-// Melhorias no Header
-// Adiciona estrutura do Carousel
-// Ajustes no layout do Carousel
-// Adiciona autoplay no Carousel
-// Refatoração do código do Carousel
-// Adiciona gradiente dinâmico
-// Correção de bugs no Carousel
-// Testes com transições
-// Melhorias na animação do Carousel
-// Pequenos ajustes no layout
-// Melhorias na acessibilidade
-// Refinamento na responsividade
-// Suporte a gestos no Carousel
-// Criação do Footer
-// Implementação do GSAP
-// Animação do Header e Carousel
-// Animação de entrada e saída no Carousel
-// Últimos ajustes antes do push
+- **package.json**: Lista as dependências e scripts para gerenciamento do projeto.

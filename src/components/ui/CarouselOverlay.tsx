@@ -19,12 +19,14 @@ export function CarouselOverlay({ images }: CarouselOverlayProps) {
     }, [selectedIndex, images]);
 
     // Valores dinâmicos para blur, opacidade e escala conforme o tema
-    const blurValue = theme === 'dark' ? '80px' : '40px';
+    const blurValue = theme === 'dark' ? '80px' : '60px';
     const opacityValue = theme === 'dark' ? '1' : '1';
-    const transformValue = theme === 'dark' ? '1.1' : '1.05';
+    const transformValue = theme === 'dark' ? '1' : '1';
+    const brightnessValue = theme === 'dark' ? '1' : '1.5';
+    const saturationValue = theme === 'dark' ? '1.5' : '2';
 
     return (
-        <div
+        <div  className="pointer-events-none select-none"
             style={{
                 position: 'absolute',
                 inset: 0, // Ocupa todo o container
@@ -32,7 +34,7 @@ export function CarouselOverlay({ images }: CarouselOverlayProps) {
                 backgroundImage: `url("${backgroundUrl}")`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-                filter: `blur(${blurValue})`,
+                filter: `blur(${blurValue}) brightness(${brightnessValue}) saturate(${saturationValue})`,
                 opacity: opacityValue,
                 transform: `scale(${transformValue})`,
             }}

@@ -11,6 +11,7 @@ type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselProps = {
     opts?: Parameters<typeof useEmblaCarousel>[0]
     plugins?: Parameters<typeof useEmblaCarousel>[1]
+    slidesCount: number;
 }
 
 type CarouselContextProps = {
@@ -23,7 +24,6 @@ type CarouselContextProps = {
     selectedIndex: number
     autoplay: ReturnType<typeof Autoplay> | null; // Novo!
     realIndex: number
-
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -37,17 +37,15 @@ function useCarousel() {
 }
 
 const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & CarouselProps>(
-    ({ opts, plugins, className, children, ...props }, ref) => {
-        const [carouselRef, api] = useEmblaCarousel({ loop: true })
+    ({ opts, plugins, slidesCount, className, children, ...props }, ref) => {
+        const [carouselRef, api] = useEmblaCarousel(opts ?? { loop: true }, plugins ?? []);
         const [realIndex, setRealIndex] = React.useState(0)
         const [canScrollPrev, setCanScrollPrev] = React.useState(false)
         const [canScrollNext, setCanScrollNext] = React.useState(false)
         const [selectedIndex, setSelectedIndex] = React.useState(0)
         const [autoplay, setAutoplay] = useState<ReturnType<typeof Autoplay> | null>(null);
 
-        const totalSlides = 6;
-
-
+        const totalSlides = slidesCount;
 
         React.useEffect(() => {
             if (!api) return
