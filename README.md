@@ -20,8 +20,3 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)
 ![Phosphor Icons](https://img.shields.io/badge/-Phosphor%20Icons-4E4E4E?logo=phosphor-icons&logoColor=white&style=flat)
 ![shadcn](https://img.shields.io/badge/shadcn-000000?style=flat&logo=shadcn&logoColor=white)
-
-## Estrutura do Projeto
-
-- **src/**: Componentes React, estilos, scripts e assets do projeto.
-- **package.json**: Lista as dependências e scripts para gerenciamento do projeto.
