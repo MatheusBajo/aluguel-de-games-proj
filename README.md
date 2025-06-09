@@ -9,6 +9,9 @@ Este é o site de **Aluguel de Games**, uma plataforma que oferece soluções co
 - **Interface Intuitiva:** Navegação facilitada para explorar os serviços e o portfólio.
 - **Portfólio:** Exposição dos equipamentos e serviços disponíveis.
 - **Formulário de Contato:** Facilita o contato e a solicitação de serviços.
+- **Catálogo Dinâmico:** Página que carrega automaticamente os arquivos
+  `metadata.json` do diretório `Organizado` e exibe cards com imagens,
+  título e descrição.
 
 ## Tecnologias Utilizadas
 
