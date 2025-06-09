@@ -21,10 +21,10 @@ import { usePalette } from 'color-thief-react';
                 })
                 .join(', ');
 
-            const gradient1 = `radial-gradient(circle at 50% 100%, ${stops})`;
-            const gradient2 = `radial-gradient(circle at 50% 50%, ${stops})`;
+            const gradientRadialBottom = `radial-gradient(circle at 50% 100%, ${stops})`;
+            const gradientLinear = `linear-gradient(180deg, ${stops})`;
 
-            const gradient = typeOfGradient === 'radial' ? gradient1 : gradient2;
+            const gradient = typeOfGradient === 'radial' ? gradientRadialBottom : gradientLinear;
 
             return (
                 <div
