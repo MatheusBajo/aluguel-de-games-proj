@@ -11,7 +11,7 @@ function ColorPalette() {
 
     return (
         <div>
-            {data.map((color, index) => (
+            {data?.map((color, index) => (
                 <div
                     key={index}
                     style={{

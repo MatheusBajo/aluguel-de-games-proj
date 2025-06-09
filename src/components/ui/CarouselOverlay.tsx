@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useCarousel } from './carousel'; // ajuste o path se necessário
+import { useCarousel } from './carousel-landing.tsx'; // ajuste o path se necessário
 import { useTheme } from '../theme-provider.tsx'; // ajuste o path conforme sua estrutura
 
 type CarouselOverlayProps = {
@@ -30,7 +30,7 @@ export function CarouselOverlay({ images }: CarouselOverlayProps) {
             style={{
                 position: 'absolute',
                 inset: 0, // Ocupa todo o container
-                zIndex: 0, // Fica atrás do conteúdo do Carousel
+                zIndex: 0, // Fica atrás do conteúdo do CarouselLanding
                 backgroundImage: `url("${backgroundUrl}")`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',

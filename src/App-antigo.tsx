@@ -1,9 +1,9 @@
 import Header from "./pages/Header.tsx";
 import {
-    Carousel,
+    CarouselLanding,
     CarouselContent,
     CarouselItem,
-} from "./components/ui/carousel"
+} from "./components/ui/carousel-landing.tsx"
 import {Card, CardContent} from "./components/ui/card.tsx";
 import {ThemeProvider} from "./components/theme-provider.tsx";
 import Autoplay from "embla-carousel-autoplay";
@@ -39,7 +39,7 @@ function App() {
 
         <main className="flex flex-col gap-5 p-0 mx-auto w-full">
             <section className="relative w-full">
-                <Carousel
+                <CarouselLanding
                     plugins={[autoplayRef.current]}
                     className="relative mx-auto w-full max-w-[1280px] select-none"
                     opts={{
@@ -82,7 +82,7 @@ function App() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                </Carousel>
+                </CarouselLanding>
             </section>
 
             {/*<section className="container flex w-full max-h-[400px] overflow-hidden">*/}

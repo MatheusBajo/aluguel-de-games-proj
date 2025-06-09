@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+main > section {
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }

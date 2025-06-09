@@ -15,7 +15,8 @@ export default {
   		xl: '1280px',
   		'2xl': '1400px',
   		'3xl': '1536px',
-  		'4xl': '1800px'
+  		'4xl': '1800px',
+		'5xl': '2200px',
   	},
   	container: {
   		center: true,
@@ -110,13 +111,23 @@ export default {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+			'bg-scrolling-reverse': {
+				'0%':   { 'background-position': '0 0' },
+				'100%': { 'background-position': '50px 50px' }, // $bg-width e $bg-height :contentReference[oaicite:1]{index=1}
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
-  	}
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+			'bg-scroll-reverse': 'bg-scrolling-reverse 2.5s linear infinite',
+  		},
+		// 1) Background image com o data-URI
+		backgroundImage: {
+			'grid-me': "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC')"
+		},
+
+	}
   },
 
   plugins: [

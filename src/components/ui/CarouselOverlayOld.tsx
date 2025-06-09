@@ -1,5 +1,5 @@
 import { usePalette } from 'color-thief-react';
-import { useCarousel } from './carousel'; // ajuste o path se necessário
+import { useCarousel } from './carousel-landing.tsx'; // ajuste o path se necessário
 import { useTheme } from '../theme-provider.tsx'; // ajuste o path conforme sua estrutura
 
 type CarouselOverlayProps = {
@@ -7,7 +7,7 @@ type CarouselOverlayProps = {
 };
 
 export function CarouselOverlay({ images }: CarouselOverlayProps) {
-    // Pega o índice do slide atual do contexto do Carousel
+    // Pega o índice do slide atual do contexto do CarouselLanding
     const { selectedIndex } = useCarousel();
     const currentImageUrl = images[selectedIndex];
 
@@ -41,7 +41,7 @@ export function CarouselOverlay({ images }: CarouselOverlayProps) {
                     position: 'absolute',
                     opacity: opacityValue,
                     inset: 0, // Ocupa todo o container
-                    zIndex: 0, // Fica atrás do Carousel
+                    zIndex: 0, // Fica atrás do CarouselLanding
                     filter: `blur(${blurValue})`,
                     background: `linear-gradient(45deg, ${stops})`,
                     backgroundSize: '200% 200%',
