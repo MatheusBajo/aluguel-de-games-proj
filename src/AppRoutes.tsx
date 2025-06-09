@@ -3,6 +3,7 @@ import Header from "./pages/landing page/Header";
 import Main from "./pages/landing page/Main-v2";
 import { Footer } from "./pages/landing page/Footer";
 import ModalCard from "./pages/landing page/sections/top-toys/product-modal/ModalCard.tsx";
+import Catalogo from "./pages/Catalogo";
 
 export default function AppRoutes() {
     const location = useLocation();
@@ -15,6 +16,7 @@ export default function AppRoutes() {
             {/* rota principal (landing) */}
             <Routes location={state?.background || location}>
                 <Route path="/" element={<Main />} />
+                <Route path="/catalogo" element={<Catalogo />} />
             </Routes>
 
             <Footer />
